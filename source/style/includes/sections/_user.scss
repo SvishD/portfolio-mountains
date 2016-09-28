@@ -1,0 +1,44 @@
+.user {
+	text-align: center;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 1175px;
+		height: 314px;
+		margin-left: -587px;
+		margin-top: -157px;
+		background-image: url('/assets/img/icons/portfolio_header.svg');
+		background-repeat: no-repeat;
+		opacity: .1;
+		z-index: -1;
+	}
+}
+
+.user__avatar {
+	@include inlineblock();
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.user__avatar-img {
+	display: block;
+	width: 100%;
+}
+
+.user__name {
+	@include roboto(medium);
+	font-size: 35px;
+}
+
+.user__description {
+	@include roboto(light);
+	opacity: .8;
+}

@@ -1,5 +1,21 @@
-body {
-  margin: 0;
-}
+@import "includes/_misc/fonts";
 
-@import 'common/greating';
+// variables
+$container-width: 1740px;
+$footer-height: 147px;
+$body-font: 'roboto_regular';
+
+//colors
+$black: #373e42;
+$grey: #455a64;
+$green: #009688;
+$lgreen: #00bfa5;
+
+// base
+@import "includes/_misc/base";
+@import "includes/_misc/mixins";
+@import "includes/_misc/font-awesome";
+
+// sections
+@import "includes/sections/header";
+@import "includes/sections/footer";

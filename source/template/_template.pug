@@ -8,7 +8,7 @@ html
     meta(content="" name="author")
     meta(content="" name="description")
     meta(content="" name="keywords")
-    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(content="width=device-width" name="viewport")
     meta(content="ie=edge" http-equiv="x-ua-compatible")
 
     //- favicon block start
@@ -24,7 +24,5 @@ html
     <![endif]-->
 
   body
-    .wrapper
-      .maincontent
-        block content
-    .footer
+    block content
+    include common/footer
