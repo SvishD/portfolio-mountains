@@ -1,0 +1,21 @@
+header.header
+	.header__container
+		.header__top
+			.header__left
+				include _socials
+			.header__right
+				a.menu(href="#")
+					i.menu__icon.fa.fa-bars
+	.header__bottom
+		.user.user--blog
+			.user__avatar
+				img.user__avatar-img(src="/assets/img/ava_sm.jpg")
+			.title-wrapper.title-wrapper--blog
+				h2.title
+					.title__text Блог
+			.user__description статьи которые я написал
+		a.down__link(href="#")
+			i.fa.fa-chevron-down
+	.triangle.triangle--blog
+		include ../../images/icons/traingle.svg
+	

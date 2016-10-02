@@ -17,6 +17,19 @@
 		opacity: .1;
 		z-index: -1;
 	}
+	&--blog {
+		&:after {
+			content: none;
+		}
+		.user__description {
+			margin-top: -45px;
+		}
+	}
+	&--welcome {
+		&:after {
+			content: none;
+		}
+	}
 }
 
 .user__avatar {

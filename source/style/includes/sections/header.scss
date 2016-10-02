@@ -9,6 +9,11 @@
 	background-size: cover;
 }
 
+.header__container {
+	margin: 0 auto;
+	width: 70%;
+}
+
 .header__top {
 	@extend %clearfix;
 	padding:30px;

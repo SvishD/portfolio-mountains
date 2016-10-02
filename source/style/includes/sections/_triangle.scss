@@ -4,7 +4,15 @@
 	width: 100%;
 	fill: #faf8f0;
 	overflow: hidden;
+	&--blog {
+		.traingle__left {
+			fill: #fff;
+		}
 
+		.traingle__right {
+			fill: #fff;
+		}
+	}
 	&--about {
 		.traingle__left {
 			fill: #efeee9;
