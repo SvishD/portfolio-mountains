@@ -1,7 +1,38 @@
-extends ../_template
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title #{title}
+		meta(content="" name="author")
+		meta(content="" name="description")
+		meta(content="" name="keywords")
+		meta(content="width=device-width" name="viewport")
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
 
-block variables
-  - var title = 'Обо мне'
+		//- favicon block start
+		//- favicon block end
 
-block content
-  include ../common/header
+		link(rel='stylesheet' href='/assets/css/foundation.css')
+		link(rel='stylesheet' href='/assets/css/app.css')
+		script(src='/assets/js/foundation.js' defer)
+		script(src='/assets/js/app.js' defer)
+
+		<!--[if lt IE 9]>
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		<![endif]-->
+
+	body
+		.wrapper-index
+			header.welcome-header
+				a.auth-btn(href="/auth.html") Авторизоваться
+			.card
+				.info
+					include ../common/_user--welcome
+				.card__buttons
+					a(href="/works.html").card__button Мои работы
+					a(href="/about.html").card__button Обо мне
+					a(href="/blog.html").card__button Блог
+		footer.welcome-footer
+			.welcome-footer__wrapper
+				.welcome-footer__text © Свищук Дмитрий | создано с любовью в LoftSchool | 2016
+						

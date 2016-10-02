@@ -1,0 +1,18 @@
+.triangle {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	fill: #faf8f0;
+	overflow: hidden;
+
+	&--about {
+		.traingle__left {
+			fill: #efeee9;
+		}
+
+		.traingle__right {
+			fill: #eeebdf;
+		}
+	}
+}
+

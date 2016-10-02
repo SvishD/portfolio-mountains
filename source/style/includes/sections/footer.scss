@@ -2,7 +2,10 @@
 	color: #fff;
 	background-color: rgba($black, .85);
 	@include roboto(regular);
-	padding: 0 30px;
+	padding: 0 30px 5px 30px;
+	margin-top: -145px;
+	position: relative;
+	box-sizing:border-box;
 }
 
 .footer__top {

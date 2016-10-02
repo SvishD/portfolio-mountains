@@ -1,0 +1,172 @@
+.about {
+	width: 100%;
+	min-height: 825px;
+  background-color: #efeee9;
+	@extend %clearfix;
+}
+
+.about__me,.about__skills {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.about__me {
+	background-color: #efeee9;
+	@extend %clearfix;
+}
+
+.about__skills {
+	background-color: #eeebdf;
+}
+
+.about__me-title,.about__me-content{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+.about__me-content {
+	padding: 20px;
+	box-sizing:border-box;
+}
+
+.about__me-img {
+	max-width: 300px;
+	max-height: 300px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.about__me-description {
+	text-align: left;
+}
+
+.about__skills {
+	text-align: center;
+	padding: 0 20px;
+	box-sizing:border-box;
+}
+
+.skills__description {
+	text-align: left;
+	margin-bottom: 60px;
+}
+
+.skills {
+	text-align: left;
+}
+
+.skills__caption {
+	@include roboto(medium);
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
+.circle {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 30px;
+  margin-right: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.circle__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include roboto(regular);
+  transform: translateY(-50%) translateX(-50%);
+  font-size: 12px;
+  color: $lgreen;
+}
+
+.circle__svg {
+  fill: none;
+  stroke-width: 20;
+  transform: rotate(-90deg);
+}
+
+.circle__fill {
+  stroke-dasharray: 285;
+}
+
+.circle__fill--html {
+  stroke-dashoffset: 70;
+}
+
+.circle__fill--css {
+  stroke-dashoffset: 70;
+}
+
+.circle__fill--js {
+  stroke-dashoffset: 190;
+}
+
+.circle__fill--php {
+  stroke-dashoffset: 230;
+}
+
+.circle__fill--mysql {
+  stroke-dashoffset: 250;
+}
+
+.circle__fill--node {
+  stroke-dashoffset: 280;
+}
+
+.circle__fill--mongo {
+  stroke-dashoffset: 280;
+}
+
+.circle__fill--git {
+  stroke-dashoffset: 90;
+}
+
+.circle__fill--gulp {
+  stroke-dashoffset: 100;
+}
+
+.circle__fill--bower {
+  stroke-dashoffset: 100;
+}
+
+
+
+.map {
+	position: relative;
+	height: 100vh;
+}
+
+.contacts {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 320px;
+  background: rgba(#fcfcfc,.85);
+  padding: 20px 40px 50px 40px;
+  @include roboto(regular);
+  font-size: 1.14rem;
+  color: $black;
+  z-index: 1;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contacts__item {
+  line-height: 30px;
+  margin-bottom: 15px;
+  text-align: left;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.contacts__icon {
+	margin-right: 10px;
+	color: $lgreen;
+}

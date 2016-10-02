@@ -1,0 +1,33 @@
+section.quotes
+  .quotes-title
+    .title-wrapper
+      h2.title
+        .title__text Что обо мне говорят
+  ul.quotes__list
+    li.quotes__item
+      blockquote.quote.
+        Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+      .quote__avatar
+        img(src="assets/img/kovaldm.jpg").quote__img
+      .quote__author Ковальчук Дмитрий
+       .quote__description основатель Losftschool
+    li.quotes__item
+      blockquote.quote.
+        Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+      .quote__avatar
+        img(src="assets/img/zar.jpg").quote__img
+      .quote__author Зар Захаров
+        .quote__description преподаватель
+  form.feedback
+    .blur
+    .feedback__wrapper
+      h3.subtitle
+          .subtitle__text Связаться со мной
+      input(type="text" placeholder="Имя").feedback__field
+      input(type="email" placeholder="Email").feedback__field
+      textarea(placeholder="Ваше сообщение").feedback__field.feedback__field--text
+      .feedback__buttons
+        input(type="submit", value="Отправить").feedback__button
+        input(type="reset", value="Очистить").feedback__button
+  a.up__link(href="#")
+    i.fa.fa-chevron-up

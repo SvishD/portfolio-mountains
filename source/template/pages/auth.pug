@@ -1,0 +1,47 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title #{title}
+		meta(content="" name="author")
+		meta(content="" name="description")
+		meta(content="" name="keywords")
+		meta(content="width=device-width" name="viewport")
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+		//- favicon block start
+		//- favicon block end
+
+		link(rel='stylesheet' href='/assets/css/foundation.css')
+		link(rel='stylesheet' href='/assets/css/app.css')
+		script(src='/assets/js/foundation.js' defer)
+		script(src='/assets/js/app.js' defer)
+
+		<!--[if lt IE 9]>
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		<![endif]-->
+
+	body
+		.wrapper-index
+			.card
+				form.auth-form
+					h3.subtitle
+						.subtitle__text Авторизуйтесь
+					.auth-form__login-wrapper
+						input(type="text" placeholder="Логин").auth-form__login
+					.auth-form__pass-wrapper
+						input(type="password" placeholder="Пароль").auth-form__pass
+					input(type="checkbox" id="captcha").captcha__check
+					label(for="captcha").captcha__check-label Я человек
+					.captcha__question Вы точно не робот?
+					input(type="radio" name="captcha-radio" id="captcha-yes").captcha__radio
+					label(for="captcha-yes").captcha__radio-label Да
+					input(type="radio" name="captcha-radio" id="captcha-no").captcha__radio
+					label(for="captcha-no").captcha__radio-label Не уверен
+				.card__buttons
+					a(href="/index.html").card__button На главную
+					a(href="#").card__button Войти
+	footer.welcome-footer
+		.welcome-footer__wrapper
+			.welcome-footer__text © Свищук Дмитрий | создано с любовью в LoftSchool | 2016
+						

@@ -1,10 +1,24 @@
 .socials {
 	@include inlineblock();
+
+	&--green {
+		margin: 40px 0px;
+		.socials__icon {
+			font-size: 20px;
+			color: $lgreen;
+			opacity: .5;
+			transition: all .5s;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
 }
 
 .socials__item {
 	@include inlineblock(middle);
-	margin-left: 10px;
+	margin-left: 28px;
 
 	&:first-child {
 		margin-left: 0;
@@ -32,6 +46,10 @@
 
 .socials_round {
 	margin-top: 20px;
+	
+	.socials__item {
+		margin-left: 10px;
+	}
 
 	.socials__link {
 		width: 36px;

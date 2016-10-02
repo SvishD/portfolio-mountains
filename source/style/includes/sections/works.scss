@@ -1,0 +1,245 @@
+.works-title {
+	text-align: center;
+	background-color: #faf8f0;
+
+}
+
+.slider {
+		position: relative;
+}
+
+.slider__item {
+	@extend %clearfix;
+	background-color: #f0efe9;
+	min-height: 750px;
+}
+
+.slider__image,.slider__description {
+	width: 50%;
+	float: left;
+}
+
+.slider__image {
+	padding-top: 110px;
+}
+.slider__img {
+	margin: 0 auto;
+	display: block;
+	max-width: 500px;
+}
+.slider__description {
+	padding-top: 250px;
+}
+
+.description__content {
+	display: inline-block;
+	margin-left: 180px;
+}
+
+.descripton__title {
+	font-family: "Bernier";
+	max-width: 420px;
+	font-size: 35px;
+	line-height: 41px;
+	margin-bottom: 40px;
+}
+
+.descripton__tech {
+	@include roboto(medium);
+	color: $lgreen;
+	padding: 20px 0;
+	border-top: 1px solid $lgreen;
+	border-bottom: 1px solid $lgreen;
+	margin-bottom: 40px;
+}
+
+.descripton__link {
+	padding: 15px 20px;
+	color: #fff;
+	background-color: $lgreen;
+	text-decoration: none;
+	border-radius: 5px;
+	@include roboto(medium);
+	display: inline-block; 
+	transition: background-color .2s;
+	&:hover {
+			  background: $green;
+			}
+}
+
+.descripton__icon {
+	margin-right: 10px;
+}
+
+.slider__arrow-left {
+	position: absolute;
+	display: block;
+	width:20px;
+	height: 20px;
+	left:30px;
+	top:50%;
+}
+
+.slider__arrow-right {
+	position: absolute;
+	display: block;
+	width:20px;
+	height: 20px;
+	right:30px;
+	top:50%;
+}
+
+.slider__icon {
+	font-size: 20px;
+	color: $lgreen;
+	transition: color .2s;
+	&:hover {
+		color: $green;
+	}
+}
+
+
+
+.quotes {
+	text-align: center;
+	background: url(/assets/img/bg3.jpg) no-repeat center center;
+	background-size: cover;
+	position: relative;
+	padding-bottom: 200px;
+}
+
+.quotes__list {
+	max-width: 42%;
+	margin: 0 auto;
+	@extend %clearfix;
+}
+
+.quotes__item {
+	text-align: left;
+	width: 47.5%;
+	float: left;
+	padding-top: 60px;
+	margin-bottom: 35px;
+	display: inline-block;
+	@include roboto(regular);
+	color: $grey;
+	font-size: 1rem;
+	position: relative;
+	margin-right: 5%;
+	&:nth-child(even) {
+		margin-right: 0;
+	}
+
+	&:before {
+		content: '\f10d';
+		font-family: "FontAwesome";
+		font-size: 35px;
+		opacity: .2;
+		position: absolute;
+		top:0;
+		left:0;
+	}
+}
+
+.quote__avatar {
+	@include inlineblock(middle);
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+
+.quote__img {
+  max-width: 100%;
+}
+
+.quote {
+	margin: 0;
+	margin-top: -25px;
+	padding-top: 25px;
+	margin-bottom: 15px;
+	color: #556358;
+	width: 100%;
+	text-align: left;
+}
+
+.quote__author {
+	@include roboto(bold);
+	font-size: 1rem;
+	color: $lgreen;
+	@include inlineblock(middle);
+}
+
+.quote__description {
+	@include roboto(regular);
+	font-size: 1rem;
+}
+
+
+.feedback {
+	min-width: 300px;
+	max-width: 380px;
+	margin: 0 auto;
+	background: rgba(#fcfcfc,.3);
+	padding-top: 40px;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 70px;
+
+	&__field {
+		display: block;
+		box-sizing: border-box;
+		width: 90%;
+		margin: 0 auto;
+		border: none;
+		border-radius: 10px;
+		padding: 15px 20px;
+		margin-bottom: 20px;
+		outline: none;
+
+		&--text {
+			height: 140px;
+		}
+	}
+	&__buttons {
+	  margin: 0;
+	  padding: 0;
+	  display: flex;
+	  list-style: none;
+	  justify-content: space-between;
+	}
+
+	&__button {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		color: #fff;
+		border: none;
+		@include roboto(regular);
+		background: rgba($lgreen,.8);
+		border-right: 2px solid rgba(#fff,.5);
+		flex-grow: 1;
+		cursor: pointer;
+		transition: background-color .2s;
+
+		&:last-child {
+			border-right: none;
+		}
+		
+		&:hover {
+		  background: $green;
+		}
+	}
+}
+
+.up__link {
+	color: #fff;
+	font-size: 26px;
+	opacity: .7;
+	transition: all .2s;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+

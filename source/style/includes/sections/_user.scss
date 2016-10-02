@@ -42,3 +42,12 @@
 	@include roboto(light);
 	opacity: .8;
 }
+
+.user--welcome {
+	.user__name {
+		color: $grey;
+	}
+	.user__description {
+		color: $grey;
+	}
+}
