@@ -7,6 +7,10 @@
   	height: 100vh;
 	background: url("/assets/img/bg2.jpg") center 100% no-repeat ;
 	background-size: cover;
+	position: relative;
+	&--blog {
+		height: 400px;
+	}
 }
 
 .header__container {
@@ -52,9 +56,4 @@
 
 .header__right{
 	text-align: right;
-}
-
-.menu {
-	color: #fff;
-	font-size: 35px;
 }

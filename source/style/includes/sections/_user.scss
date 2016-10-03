@@ -29,7 +29,12 @@
 		&:after {
 			content: none;
 		}
+	.user__name {
+		@include roboto(medium);
+		font-size: 28px;
 	}
+	}
+	
 }
 
 .user__avatar {

@@ -25,7 +25,7 @@
 .slider__img {
 	margin: 0 auto;
 	display: block;
-	max-width: 500px;
+	max-width: 75%;
 }
 .slider__description {
 	padding-top: 250px;
@@ -98,7 +98,33 @@
 	}
 }
 
+.slider__nav {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	@extend %clearfix;
+}
 
+.slider-nav__item {
+	float: left;
+	font-size: 0;
+}
+
+.slider-nav__link {
+	width: 11px;
+	height: 11px;
+	background-color: #fff;
+	border: 2px solid $lgreen;
+	border-radius: 50%;
+	display: block;
+	margin-right: 20px;
+	z-index: 30;
+
+	&--active {
+		background-color: $lgreen;
+	}
+}
 
 .quotes {
 	text-align: center;
@@ -181,7 +207,8 @@
 	min-width: 300px;
 	max-width: 380px;
 	margin: 0 auto;
-	background: rgba(#fcfcfc,.3);
+	background: url(../img/fb_bg.png) no-repeat center;
+	background-size: cover;
 	padding-top: 40px;
 	border-radius: 5px;
 	overflow: hidden;

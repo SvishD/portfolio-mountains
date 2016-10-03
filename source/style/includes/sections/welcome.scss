@@ -20,7 +20,7 @@
 	padding: 14px 28px;
 	color: #fff;
 	border: 1px solid #fff;
-	border-radius: 10px;
+	border-radius: 5px;
 	font-size: 1rem;
 	@include roboto(medium);
 	&:hover {
@@ -220,4 +220,5 @@
   margin: 0 auto;
   @include roboto(light);
   opacity: .8;
+  overflow: hidden;
 }

@@ -4,7 +4,6 @@
 	&--green {
 		margin: 40px 0px;
 		.socials__icon {
-			font-size: 20px;
 			color: $lgreen;
 			opacity: .5;
 			transition: all .5s;
@@ -34,7 +33,7 @@
 }
 
 .socials__icon {
-	font-size: 20px;
+	font-size: 28px;
 	color: #fff;
 	opacity: .5;
 	transition: all .5s;
@@ -46,6 +45,7 @@
 
 .socials_round {
 	margin-top: 20px;
+
 	
 	.socials__item {
 		margin-left: 10px;
@@ -71,6 +71,7 @@
 
 	.socials__icon {
 		@include inlineblock(middle);
+		font-size: 20px;
 	}
 
 }

@@ -168,5 +168,11 @@
 
 .contacts__icon {
 	margin-right: 10px;
+  font-size: 28px;
+  @include inlineblock(middle);
 	color: $lgreen;
+}
+
+.contacts__text {
+  @include inlineblock(middle);
 }
