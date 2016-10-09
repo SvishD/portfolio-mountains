@@ -20,6 +20,10 @@
 
 		.traingle__right {
 			fill: #eeebdf;
+
+			@include tablet {
+				fill: #efeee9;
+			}
 		}
 	}
 }

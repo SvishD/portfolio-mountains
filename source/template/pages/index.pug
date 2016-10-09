@@ -26,13 +26,33 @@ html
 			header.welcome-header
 				a.auth-btn(href="/auth.html") Авторизоваться
 			.card
-				.info
-					include ../common/_user--welcome
-				.card__buttons
-					a(href="/works.html").card__button Мои работы
-					a(href="/about.html").card__button Обо мне
-					a(href="/blog.html").card__button Блог
+				.card__content
+					.info
+						include ../common/_user--welcome
+					.card__buttons
+						a(href="/works.html").card__button Мои работы
+						a(href="/about.html").card__button Обо мне
+						a(href="/blog.html").card__button Блог
+				form.auth-form
+					.auth-form__content
+						h3.subtitle.subtitle--auth
+							.subtitle__text Авторизуйтесь
+						.auth-form__login-wrapper
+							input(type="text" placeholder="Логин").auth-form__login
+						.auth-form__pass-wrapper
+							input(type="password" placeholder="Пароль").auth-form__pass
+						input(type="checkbox" id="captcha").captcha__check
+						label(for="captcha").captcha__check-label Я человек
+						.captcha__question Вы точно не робот?
+						input(type="radio" name="captcha-radio" id="captcha-yes").captcha__radio
+						label(for="captcha-yes").captcha__radio-label Да
+						input(type="radio" name="captcha-radio" id="captcha-no").captcha__radio
+						label(for="captcha-no").captcha__radio-label Не уверен
+					.card__buttons.card__buttons--auth
+						a(href="/index.html").card__button.index-btn На главную
+						a(href="#").card__button Войти
 			footer.welcome-footer
 				.welcome-footer__wrapper
-					.welcome-footer__text © Свищук Дмитрий | создано с любовью в LoftSchool | 2016
+					span.welcome-footer__copy © Свищук Дмитрий 
+					span.welcome-footer__text | создано с любовью в LoftSchool | 2016
 						

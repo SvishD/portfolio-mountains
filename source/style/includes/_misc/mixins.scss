@@ -14,3 +14,46 @@
 	}
 }
 
+///media
+
+@mixin desktop() {
+  @media screen and (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin note() {
+  @media screen and (max-width: 1250px) {
+    @content;
+  }
+}
+
+
+@mixin laptop() {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin phone() {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin br1150() {
+  @media screen and (max-width: 1150px) {
+    @content;
+  }
+}
+
+@mixin br700() {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}

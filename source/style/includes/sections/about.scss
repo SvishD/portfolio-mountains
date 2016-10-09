@@ -1,6 +1,5 @@
 .about {
 	width: 100%;
-	min-height: 825px;
   background-color: #efeee9;
 	@extend %clearfix;
 }
@@ -9,6 +8,11 @@
 	width: 50%;
 	height: 100%;
 	float: left;
+
+  @include tablet {
+    float: none;
+    width: 100%;
+  }
 }
 
 .about__me {
@@ -21,72 +25,186 @@
 }
 
 .about__me-title,.about__me-content{
-	width: 50%;
-	float: left;
-	text-align: center;
+  float: left;
+  text-align: center;
+}
+
+.about__me-title {
+  width: 48.5%;
+  float: left;
+
+  @include note {
+    float: none;
+    width: 100%;
+  }
 }
 
 .about__me-content {
-	padding: 20px;
-	box-sizing:border-box;
+  width: 51.5%;
+  float: right;
+  padding-top: 5px;
+  padding-right: 35px;
+  box-sizing:border-box;
+
+  @include note {
+    float: none;
+    width: 100%;
+    padding: 0 80px;
+  }
+
+  @include laptop {
+    padding: 0 20px;
+  }
+
+  @include tablet {
+    padding: 0 19.5% 45px 19.5%;
+  }
+
+  @include phone {
+    padding: 0px 10px 30px 10px;
+  }
 }
 
 .about__me-img {
-	max-width: 300px;
-	max-height: 300px;
-	display: block;
-	margin: 0 auto;
-	margin-bottom: 40px;
+  max-width: 440px;
+  max-height: 390px;
+  display: block;
+  margin-bottom: 35px;
+
+  @include note {
+    margin: 0 auto 35px auto;
+  }
 }
 
 .about__me-description {
 	text-align: left;
+  @include roboto(regular);
+  line-height: 24px;
+
+  p {
+    margin-bottom: 10px;
+  }
 }
 
 .about__skills {
 	text-align: center;
-	padding: 0 20px;
 	box-sizing:border-box;
+  margin-top: -5px;
+  min-height: 835px;
+}
+
+.about__skills-container {
+  padding-left: 38px;
+
+  @include laptop {
+    padding-left: 0px;
+  }
 }
 
 .skills__description {
 	text-align: left;
-	margin-bottom: 60px;
+	margin-bottom: 45px;
+  @include roboto(regular);
+  line-height: 24px;
+
+  @include laptop {
+    padding-left: 20px;
+  }
+
+  @include tablet {
+    padding: 0 150px;
+  }
+
+  @include phone {
+    padding: 0 10px;
+  }
 }
 
 .skills {
 	text-align: left;
 }
 
+.skills__row {
+  .circle:last-child {
+    margin-right: 0px;
+
+    @include phone {
+      margin-right: 10%;
+    }
+  }
+
+  @include br1150 {
+    text-align: center;
+  }
+  @include phone {
+      margin-right: -10%;
+    }
+}
+
+
 .skills__caption {
 	@include roboto(medium);
 	font-size: 28px;
-	margin-bottom: 20px;
+	margin-bottom: 12px;
+  @include phone {
+      margin-left: -10%;
+    }
 }
 
 .circle {
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   margin-bottom: 30px;
-  margin-right: 40px;
+  margin-right: 4%;
   position: relative;
   display: inline-block;
+
+  @include note {
+    width: 110px;
+    height: 110px;
+  }
+
+  @include phone {
+    width: 7.885rem;
+    height: 7.885rem;
+    margin-right: 10%;
+  }
 }
 
 .circle__caption {
   position: absolute;
+  text-align: center;
   top: 50%;
   left: 50%;
   @include roboto(regular);
   transform: translateY(-50%) translateX(-50%);
   font-size: 12px;
   color: $lgreen;
+
+  @include note {
+    top: 55%;
+    left: 55%;
+  }
+
+  @include tablet {
+    top: 62%;
+    left: 62%;
+  }
+
+  @include phone {
+    top: 55%;
+    left: 55%;
+  }
 }
 
 .circle__svg {
   fill: none;
   stroke-width: 20;
   transform: rotate(-90deg);
+
+  @include note {
+    transform: scale(0.916) rotate(-90deg);
+  }
 }
 
 .circle__fill {
@@ -138,37 +256,59 @@
 .map {
 	position: relative;
 	height: 100vh;
+  min-height: 925px;
 }
 
 .contacts {
   position: absolute;
+  box-sizing: border-box;
   top: 40%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  min-width: 320px;
+  min-width: 380px;
   background: rgba(#fcfcfc,.85);
-  padding: 20px 40px 50px 40px;
-  @include roboto(regular);
-  font-size: 1.14rem;
+  padding: 25px 40px 30px 40px;
+  @include roboto(medium);
+  font-size: 1rem;
   color: $black;
   z-index: 1;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
+
+  @include phone {
+    width: 100%;
+    top: 15%;
+  }
+}
+
+.contacts__list {
+  margin-top: -10px;
+}
+
+.contacts__link {
+  color: $grey;
 }
 
 .contacts__item {
   line-height: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   text-align: left;
 
   &:last-child {
     margin-bottom: 0px;
+    margin-top: -5px;
+    margin-left: 5px;
+    .contacts__icon{
+      font-size: 30px;
+
+
+    }
   }
 }
 
 .contacts__icon {
 	margin-right: 10px;
-  font-size: 28px;
+  font-size: 24px;
   @include inlineblock(middle);
 	color: $lgreen;
 }

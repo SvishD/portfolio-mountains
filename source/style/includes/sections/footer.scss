@@ -1,11 +1,23 @@
 .footer {
 	color: #fff;
+	height: 147px;
 	background-color: rgba($black, .85);
 	@include roboto(regular);
 	padding: 0 30px 5px 30px;
-	margin-top: -145px;
+	margin-top: -147px;
 	position: relative;
 	box-sizing:border-box;
+
+	@include laptop {
+		height: 215px;
+		margin-top: -215px;
+	}
+
+	@include phone {
+		padding: 0px;
+		height: 270px;
+		margin-top: -270px;
+	}
 }
 
 .footer__top {
@@ -23,13 +35,6 @@
 	opacity: .5;
 }
 
-.footer__left,.footer__right {
-	width: 50%;
-	float: left;
-	display: inline-block;
-  	vertical-align: middle;
-}
-
 .footer__left{
 	text-align: left;
 }
@@ -37,7 +42,26 @@
 .footer__right{
 	text-align: right;
 }
+.footer__left,.footer__right {
+	width: 50%;
+	float: left;
+	display: inline-block;
+  	vertical-align: middle;
+
+  	@include laptop {
+  		float: none;
+  		width: 100%;
+  		text-align: center;
+  		margin: 0 auto;
+  	}
+}
+
 
 .footer__copyright {
 	padding-top: 10px;
+	display: inline-block;
+
+	@include laptop {
+  		padding-top: 7px;
+  	}
 }

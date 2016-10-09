@@ -1,39 +1,68 @@
 .works-title {
 	text-align: center;
 	background-color: #faf8f0;
+	padding-bottom: 25px;
 
 }
 
 .slider {
 		position: relative;
+		
 }
 
 .slider__item {
 	@extend %clearfix;
 	background-color: #f0efe9;
-	min-height: 750px;
+	max-height: 750px;
+	@include laptop {
+		display:table;
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .slider__image,.slider__description {
 	width: 50%;
 	float: left;
+
+	@include laptop {
+		float: none;
+		width: 100%;
+	}
 }
 
 .slider__image {
-	padding-top: 110px;
+	padding-top: 5%;
+	display:table-footer-group;
+	@include laptop {
+		text-align: center;
+	}
 }
 .slider__img {
-	margin: 0 auto;
-	display: block;
+	float: right;
+	margin-right:8.5%;
 	max-width: 75%;
+	@include laptop {
+		float: none;
+		margin-right:0;
+	}
 }
 .slider__description {
-	padding-top: 250px;
+	padding-top: 13.5%;
+	display:table-header-group;
 }
 
 .description__content {
 	display: inline-block;
-	margin-left: 180px;
+	margin-left: 20%;
+	width: 46%;
+	@include laptop {
+		margin: 5% 0;
+		width: 60%;
+	}
+	@include phone {
+		width: 100%;
+	}
 }
 
 .descripton__title {
@@ -41,20 +70,25 @@
 	max-width: 420px;
 	font-size: 35px;
 	line-height: 41px;
-	margin-bottom: 40px;
+	margin-bottom: 33px;
+
+	@include laptop {
+		max-width: 920px;
+	}
 }
 
 .descripton__tech {
 	@include roboto(medium);
+	font-size: 1rem;
 	color: $lgreen;
-	padding: 20px 0;
+	padding: 15px 0;
 	border-top: 1px solid $lgreen;
 	border-bottom: 1px solid $lgreen;
 	margin-bottom: 40px;
 }
 
 .descripton__link {
-	padding: 15px 20px;
+	padding: 12px 22px;
 	color: #fff;
 	background-color: $lgreen;
 	text-decoration: none;
@@ -74,23 +108,21 @@
 .slider__arrow-left {
 	position: absolute;
 	display: block;
-	width:20px;
-	height: 20px;
-	left:30px;
+	left: 1.5%;
 	top:50%;
+	transform: translateY(-50%);
 }
 
 .slider__arrow-right {
 	position: absolute;
 	display: block;
-	width:20px;
-	height: 20px;
-	right:30px;
+	right: 1.5%;
 	top:50%;
+	transform: translateY(-50%);
 }
 
 .slider__icon {
-	font-size: 20px;
+	font-size: 30px;
 	color: $lgreen;
 	transition: color .2s;
 	&:hover {
@@ -104,6 +136,10 @@
 	left: 50%;
 	transform: translateX(-50%);
 	@extend %clearfix;
+
+	@include laptop {
+		transform: translateX(-20%);
+	}
 }
 
 .slider-nav__item {
@@ -112,8 +148,8 @@
 }
 
 .slider-nav__link {
-	width: 11px;
-	height: 11px;
+	width: 8px;
+	height: 8px;
 	background-color: #fff;
 	border: 2px solid $lgreen;
 	border-radius: 50%;
@@ -132,26 +168,37 @@
 	background-size: cover;
 	position: relative;
 	padding-bottom: 200px;
+	@include laptop {
+		padding-bottom: 268px;
+	}
+	@include phone {
+		padding-bottom: 323px;
+	}
 }
 
 .quotes__list {
-	max-width: 42%;
+	width: 780px;
 	margin: 0 auto;
+	margin-bottom: 60px;
 	@extend %clearfix;
+
+	@include br700 {
+		width: 500px;
+	}
 }
 
 .quotes__item {
 	text-align: left;
-	width: 47.5%;
+	width: 365px;
 	float: left;
-	padding-top: 60px;
-	margin-bottom: 35px;
+	padding-top: 70px;
 	display: inline-block;
 	@include roboto(regular);
 	color: $grey;
 	font-size: 1rem;
+	line-height: 26px;
 	position: relative;
-	margin-right: 5%;
+	margin-right: 35px;
 	&:nth-child(even) {
 		margin-right: 0;
 	}
@@ -159,11 +206,19 @@
 	&:before {
 		content: '\f10d';
 		font-family: "FontAwesome";
-		font-size: 35px;
+		font-size: 37px;
 		opacity: .2;
 		position: absolute;
-		top:0;
+		top:17px;
 		left:0;
+		@include phone {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	@include tablet {
+		margin-right: 45px;
 	}
 }
 
@@ -173,7 +228,7 @@
 	height: 80px;
 	overflow: hidden;
 	border-radius: 50%;
-	margin-right: 20px;
+	margin-right: 16px;
 }
 
 .quote__img {
@@ -182,8 +237,6 @@
 
 .quote {
 	margin: 0;
-	margin-top: -25px;
-	padding-top: 25px;
 	margin-bottom: 15px;
 	color: #556358;
 	width: 100%;
@@ -207,22 +260,21 @@
 	min-width: 300px;
 	max-width: 380px;
 	margin: 0 auto;
-	background: url(../img/fb_bg.png) no-repeat center;
-	background-size: cover;
 	padding-top: 40px;
 	border-radius: 5px;
 	overflow: hidden;
 	margin-bottom: 70px;
+	position: relative;
 
 	&__field {
 		display: block;
 		box-sizing: border-box;
-		width: 90%;
+		width: 89.5%;
 		margin: 0 auto;
 		border: none;
-		border-radius: 10px;
-		padding: 15px 20px;
-		margin-bottom: 20px;
+		border-radius: 5px;
+		padding: 12px 20px;
+		margin-bottom: 19px;
 		outline: none;
 
 		&--text {
@@ -238,8 +290,8 @@
 	}
 
 	&__button {
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 11px;
+		padding-bottom: 11px;
 		color: #fff;
 		border: none;
 		@include roboto(regular);
@@ -270,3 +322,18 @@
 }
 
 
+.blur {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/fb_bg2.jpg) no-repeat center;
+	background-size: cover;
+	filter: blur(10px);
+	z-index: 0;
+}
+
+.feedback__wrapper {
+	position: relative;
+}

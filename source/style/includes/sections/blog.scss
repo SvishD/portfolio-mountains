@@ -1,7 +1,7 @@
 .blog {
   @extend %clearfix;
-  padding-top: 50px;
-  padding-bottom: 200px;
+  padding-top: 45px;
+  padding-bottom: 250px;
   background-color: #fff;
 }
 
@@ -13,17 +13,23 @@
 
 .blog-nav {
   float: left;
-  width: 20%;
-  margin-right: 10%;
+  width: 21.8%;
+  margin-right: 6.5%;
+  margin-top: 5px;
   text-align: right;
+  @include laptop {
+    display: none;
+  }
 }
 .blog-nav__link {
-  padding: 15px 18px;
+  padding: 14px 18px;
   display: block;
   text-decoration: none;
   color:$grey;
   border-right: 3px solid transparent;
   @include roboto(regular);
+  font-size: 1rem;
+  line-height: 24px;
   &:hover {
     color: $lgreen;
   }
@@ -37,6 +43,13 @@
 .articles {
   width: 50%;
   float: left;
+  @include desktop {
+    width: 60%;
+  }
+  @include laptop {
+    width: 95%;
+    margin-left: 5%;
+  }
 }
 
 .article {
@@ -65,7 +78,7 @@
   margin: 0;
   font-family: 'Bernier';
   color: #566358;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .article__date {
@@ -79,6 +92,9 @@
   p {
     margin: 0;
     margin-bottom: 15px;
-    font: 1rem 'Roboto', Arial, sans-serif;   
+    @include roboto(regular);
+    font-size: 1rem;
+    line-height: 26px;
+
   }
 }

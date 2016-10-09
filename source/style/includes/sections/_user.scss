@@ -10,19 +10,22 @@
 		left: 50%;
 		width: 1175px;
 		height: 314px;
-		margin-left: -587px;
-		margin-top: -157px;
+		transform: translate(-50%,-50%);
 		background-image: url('/assets/img/icons/portfolio_header.svg');
 		background-repeat: no-repeat;
 		opacity: .1;
 		z-index: -1;
+		@include laptop {
+			content: none;
+		}
 	}
+
 	&--blog {
 		&:after {
 			content: none;
 		}
 		.user__description {
-			margin-top: -45px;
+			margin-top: -38px;
 		}
 	}
 	&--welcome {
@@ -32,7 +35,10 @@
 	.user__name {
 		@include roboto(medium);
 		font-size: 28px;
-	}
+		}
+	.user__avatar {
+		margin-bottom: 10px;
+		}
 	}
 	
 }
@@ -43,7 +49,7 @@
 	height: 140px;
 	border-radius: 50%;
 	overflow: hidden;
-	margin-bottom: 30px;
+	margin-bottom: 17px;
 }
 
 .user__avatar-img {

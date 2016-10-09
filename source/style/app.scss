@@ -12,11 +12,12 @@ $green: #009688;
 $lgreen: #00bfa5;
 
 // base
-@import "includes/_misc/base";
 @import "includes/_misc/mixins";
+@import "includes/_misc/base";
 @import "includes/_misc/font-awesome";
 
 // sections
+@import "includes/sections/_titles";
 @import "includes/sections/welcome";
 @import "includes/sections/header";
 @import "includes/sections/about";

@@ -1,5 +1,6 @@
 .nav {
 	@extend %clearfix;
+	display: inline-block;
 }
 
 .nav__list {
@@ -7,16 +8,20 @@
 
 .nav__item {
 	float: left;
-	margin-right: 40px;
+	margin-right: 38px;
 	&:last-child {
 		margin-right: none;
+	}
+
+	@include phone {
+		margin-right: 10px;
 	}
 
 }
 
 .nav__link {
 	display: block;
-	padding: 30px 0px;
+	padding: 25px 0px;
 	text-decoration: none;
 	color: #fff;
 	transition: all .5s;
@@ -24,5 +29,9 @@
 
 	&:hover {
 		color: $lgreen;
+	}
+
+	@include laptop {
+		padding-bottom: 20px;
 	}
 }

@@ -1,5 +1,7 @@
 .wrapper-index {
 	width: 100%;
+  min-width: 320px;
+  min-height: 568px;
 	height: 100%;
 	background: url("/assets/img/bg.jpg") center 100% no-repeat ;
 	background-size: cover;
@@ -11,13 +13,19 @@
 	padding-top: 24px;
 	padding-right: 100px;
 	@extend %clearfix;
+
+  @include phone {
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 0px;
+  }
 }
 
 .auth-btn {
 	float: right;
 	display: inline-block;
 	text-decoration: none;
-	padding: 14px 28px;
+	padding: 10px 27px;
 	color: #fff;
 	border: 1px solid #fff;
 	border-radius: 5px;
@@ -27,6 +35,10 @@
 		color: $lgreen;
 		background-color: #fff
 	}
+
+  @include phone {
+    float: none;
+  }
 }
 
 
@@ -35,17 +47,26 @@
 	position: relative;
 	background-color: rgba(#fff,.85);
 	padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card__content {
+  transition: all 3s;
 }
 
 .card {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	min-width: 380px;
-	transform: translate(-50%, -50%);
+  min-width: 320px;
+  max-width: 380px;
+	margin-top: -200px;
+  margin-left: -190px;
 	text-align: center;
 	overflow: hidden;
 	border-radius: 5px;
+  transform-style:preserve-3d;
 
 	&__buttons {
 	  margin: 0;
@@ -53,11 +74,16 @@
 	  display: flex;
 	  list-style: none;
 	  justify-content: space-between;
+    &--auth {
+      .card__button {
+        width: 50%;
+      }
+    }
 	}
 
 	&__button {
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 11px;
+		padding-bottom: 11px;
 		color: #fff;
 		border: none;
 		text-decoration: none;
@@ -79,19 +105,26 @@
 }
 
 .auth-form {
-	z-index: 333;
-	position: relative;
-	background-color: rgba(#fff,.85);
-	padding: 40px 0;
-	min-width: 380px;
+	display: none;
+  transition: all 3s;
 }
+
+.auth-form__content {
+    z-index: 333;
+    position: relative;
+    background-color: rgba(#fff,.85);
+    padding: 40px 0;
+    padding-top: 30px;
+    min-width: 380px;
+}
+
 
 .auth-form__login-wrapper,
 .auth-form__pass-wrapper {
   position: relative;
   padding-left: 45px;
   margin: 0 auto;
-  width: 80%;
+  width: 77.5%;
   margin-bottom: 20px;
   &::after {
     content: '';
@@ -100,7 +133,7 @@
     top: 0;
     bottom: 0;
     width: 45px;
-    border-radius: 10px 0 0 10px;
+    border-radius: 5px 0 0 5px;
   }
 }
 
@@ -122,11 +155,11 @@
   margin: 0 auto;
   position: relative;
   border: none;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 5px 5px 0;
   background: #fff;
   width: 100%;
   box-sizing: border-box;
-  padding: 15px 0;
+  padding: 11px 0;
   padding-left: 20px;
   @include roboto(regular);
   color: #373e42;
@@ -144,6 +177,8 @@
   padding-left: 30px;
   position: relative;
   margin-bottom: 15px;
+  @include roboto(regular);
+  font-size: 1rem;
   &::after {
     content: '';
     position: absolute;
@@ -164,16 +199,17 @@
 }
 
 .captcha__question {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   @include roboto(bold);
 }
 
 .captcha__radio-label {
   @include roboto(regular);
+  font-size: 1rem;
   padding-left: 30px;
   display: inline-block;
   position: relative;
-  margin-right: 20px;
+  margin-right: 30px;
   &:last-child {
     margin-right: 0;
   }
@@ -181,8 +217,9 @@
     content: '';
     position: absolute;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    border: 1px solid #cdcdcd;
+    width: 19px;
+    height: 19px;
     left: 0;
     top: 0;
     background: #fff;
@@ -213,12 +250,31 @@
   padding-bottom: 40px;
   text-align: center;
   color: #fff;
+
+  @include phone {
+    padding-bottom: 10px;
+  }
 }
 
 .welcome-footer__wrapper {
-  width: 500px;
-  margin: 0 auto;
+  text-align: center;
   @include roboto(light);
   opacity: .8;
   overflow: hidden;
+}
+
+.welcome-footer__copy {
+  @include phone {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.welcome-footer__text {
+  @include phone {
+    display: block;
+    &::first-letter {
+      font-size: 0px;
+    }
+  }
 }

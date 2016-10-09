@@ -6,10 +6,14 @@ body {
 
 html {
 	font-size: 16px;
+	@include tablet {
+		font-size: 14px;
+	}
 }
 
 html, body {
 	width: 100%;
+	min-width: 320px;
 	height: 100%;
 	color: $grey;
 	background-color: #f6f6f6;
@@ -38,102 +42,5 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 }
 
-.title {
-	max-width: 290px;
-	display: inline-block;
-	position: relative;
-	padding: 0 20px;
-	margin: 0 auto;
-	margin-bottom: 40px;
 
-
-	&:before,
-	&:after {
-	  content: '';
-	  background-color: rgba($black, 0.2);
-	  position: absolute;
-	  width: 22px;
-	  height: 5px;
-	  top: 50%;
-	  margin-top: -0.18rem;
-	}
-	&:before{
-	  left: -20px;
-	}
-	&:after {
-	  right: -20px;
-	}
-}
-
-.title__text {
-	font-family: "Bernier";
-	font-size: 63px;
-	line-height: 66px;
-	color: $black;
-	position:relative;
-}
-
-.title-wrapper {
-	background-image: url('/assets/img/icons/about_header.svg');
-	background-repeat: no-repeat;
-	max-width: 28rem;
-	padding-top: 2.25rem;
-	background-size: contain;
-	background-position: center center;
-	margin: 0 auto;
-
-	&--works {
-		background-image: url('/assets/img/icons/works_header.svg');
-	}
-	&--about {
-		margin-top: -35px;
-	}
-	&--blog {
-		background-image: url('/assets/img/icons/blog_header.svg');
-		.title {
-			&:before,
-			&:after {
-			  background-color: rgba(#fff, 0.2);
-			}
-		}
-		.title__text {
-			color: #fff;
-		}
-	}
-
-}
-
-.subtitle {
-	max-width: 250px;
-	display: inline-block;
-	position: relative;
-	padding: 0 20px;
-	text-align: center;
-	margin-bottom: 40px;
-
-
-	&:before,
-	&:after {
-	  content: '';
-	  background-color: rgba($black, 0.2);
-	  position: absolute;
-	  width: 22px;
-	  height: 5px;
-	  top: 50%;
-	  margin-top: -0.18rem;
-	}
-	&:before{
-	  left: -20px;
-	}
-	&:after {
-	  right: -20px;
-	}
-}
-
-.subtitle__text {
-	font-family: "Bernier";
-	font-size: 35px;
-	line-height: 41px;
-	text-align: center;
-}
 
