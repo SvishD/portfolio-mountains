@@ -254,9 +254,12 @@
 
 
 .map {
-	position: relative;
 	height: 100vh;
   min-height: 925px;
+}
+
+.section-map {
+  position: relative;
 }
 
 .contacts {
@@ -265,7 +268,7 @@
   top: 40%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  min-width: 380px;
+  width: 380px;
   background: rgba(#fcfcfc,.85);
   padding: 25px 40px 30px 40px;
   @include roboto(medium);
@@ -274,6 +277,7 @@
   z-index: 1;
   border-radius: 5px;
   text-align: center;
+  z-index: 99;
 
   @include phone {
     width: 100%;

@@ -18,7 +18,9 @@ section.about
 		.about__skills-container
 			.skills__description Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
 			include _skills
-section.map
-	include map
+section.section-map
+	.map#map
 	include _contacts
+	script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCREUA3rohY3Lbsd9rRr_Pcuzv2DiicrxA&callback=map.init' async defer)
+
 				
