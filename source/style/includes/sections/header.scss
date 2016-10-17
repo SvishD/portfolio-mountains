@@ -4,11 +4,12 @@
 .header {
 	width: 100%;
   	height: 100vh;
+  	min-height: 650px;
 	background: url("/assets/img/bg2.jpg") center 100% no-repeat ;
 	background-size: cover;
 	position: relative;
 	&--blog {
-		min-height: 600px;
+		height: 600px;
 	}
 }
 
@@ -58,4 +59,9 @@
 
 .header__right{
 	text-align: right;
+}
+
+.menu {
+	position: relative;
+	z-index: 9999;
 }

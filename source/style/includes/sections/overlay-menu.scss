@@ -1,0 +1,93 @@
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: rgba($lgreen, 0.95);
+    overflow-y: hidden;
+    transition: 0.5s;
+    &--active {
+        height: 100%;
+    }
+}
+
+.overlay__list {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay__link {
+    padding: 8px;
+    text-decoration: none;
+    font-family: "Bernier";
+    position:relative;
+    font-size: 63px;
+    line-height: 66px;
+    color: #fff;
+    display: inline-block;
+    
+    &:hover::before,&:hover::after {
+          content: '';
+          background-color: #fff;
+          position: absolute;
+          width: 22px;
+          height: 5px;
+          top: 50%;
+          margin-top: -0.18rem;
+    }
+    &:hover::before{
+          left: -60px;
+        }
+    &:hover::after {
+      right: -60px;
+    }
+}
+
+.burger-svg {
+    .bar {
+        transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;  
+    }
+    .bar-1 {
+        transform: rotate(0deg) translateY(0) translateX(0px);
+        transform-origin: 40px 0px;
+        
+    }
+    .bar-2 {
+        opacity: 1;
+    }
+    .bar-3 {
+        transform: rotate(0deg) translateY(0px) translateX(0px);
+        transform-origin: 40px 35px;
+    }
+
+    &--active {
+        .bar {
+            transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;  
+        }
+        .bar-1 {
+            transform: rotate(-45deg) translateY(0) translateX(-3px);
+            transform-origin: 40px 0px;
+            @include tablet {
+                transform: rotate(-45deg) translateY(1px) translateX(-3px);
+            }
+            
+        }
+        .bar-2 {
+            opacity: 0;
+        }
+        .bar-3 {
+            transform: rotate(45deg) translateY(0px) translateX(-2px);
+            transform-origin: 40px 35px;
+            @include tablet {
+                transform: rotate(45deg) translateY(-7px) translateX(-2px);
+            }
+        }
+    }
+}
+
+

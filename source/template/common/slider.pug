@@ -4,7 +4,7 @@
 			.title__text Мои работы
 .slider
 	ul.slider__list
-		li.slider__item
+		li.slider__item.slider__item--active
 			.slider__image
 				img.slider__img(src="/assets/img/work-1.png" alt="site-1")
 			.slider__description
@@ -14,16 +14,32 @@
 					a.descripton__link(href="#")
 						i.descripton__icon.fa.fa-link
 						span.descripton__text Посмотреть сайт
-	ul.slider__nav
-		li.slider-nav__item
-			a(href="#").slider-nav__link.slider-nav__link--active slide1
-		li.slider-nav__item
-			a(href="#").slider-nav__link slide2
-		li.slider-nav__item
-			a(href="#").slider-nav__link slide3
-	a.slider__arrow-left(href="#")
+
+		li.slider__item
+			.slider__image
+				img.slider__img(src="/assets/img/work-2.png" alt="site-2")
+			.slider__description
+				.description__content
+					.descripton__title Агентство интернет решений
+					.descripton__tech HTML, CSS, JS
+					a.descripton__link(href="#")
+						i.descripton__icon.fa.fa-link
+						span.descripton__text Посмотреть сайт
+
+		li.slider__item
+			.slider__image
+				img.slider__img(src="/assets/img/work-3.png" alt="site-3")
+			.slider__description
+				.description__content
+					.descripton__title Портал обучающих видеоуроков
+					.descripton__tech HTML, CSS, JS
+					a.descripton__link(href="#")
+						i.descripton__icon.fa.fa-link
+						span.descripton__text Посмотреть сайт
+	ul.slider__dots
+	a.slider__arrow.slider__arrow--left(href="#")
 		i.slider__icon.fa.fa-chevron-left
-	a.slider__arrow-right(href="#")
+	a.slider__arrow.slider__arrow--right(href="#")
 		i.slider__icon.fa.fa-chevron-right
 
 

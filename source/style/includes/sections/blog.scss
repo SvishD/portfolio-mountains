@@ -1,8 +1,9 @@
 .blog {
   @extend %clearfix;
   padding-top: 45px;
-  padding-bottom: 250px;
+  padding-bottom: 350px;
   background-color: #fff;
+  position: relative;
 }
 
 .blog-title {
@@ -12,15 +13,86 @@
 }
 
 .blog-nav {
-  float: left;
+  position: absolute;
+  left: 0;
+  top: 45px;
   width: 21.8%;
   margin-right: 6.5%;
-  margin-top: 5px;
   text-align: right;
   @include laptop {
     display: none;
   }
 }
+
+.blog-nav--green {
+    display: none;
+    &:hover {
+        left: 0;
+      }
+    @include laptop {
+      position: fixed;
+      z-index: 10;
+      width: 40%;
+      left: -40%;
+      display: block;
+      text-align: right;
+      background-color: $lgreen;
+      height: 100%;
+      transition: left .7s;
+    }
+    @include phone {
+      left: -80%;
+      width: 80%;
+    }
+    .blog-nav__list {
+      margin-top: 50%;
+      position: relative;
+      z-index: 10;
+    }
+}
+
+.blog-nav__show {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  right: -10px;
+  background-color:$lgreen;
+  border-radius: 50%;
+  font-size: 0;
+  z-index: 9;
+  transform: translateY(-50%);
+}
+
+.sticky {
+  position: fixed;
+  z-index: 100;
+  width: 21.8%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.blog-nav__item {
+  &--active {
+    .blog-nav__link {
+      border-right: 3px solid $lgreen;
+      color: $lgreen;
+      @include roboto(bold);
+    }
+  }
+  @include laptop {
+    &--active {
+      .blog-nav__link {
+        border-right: none;
+        color: #fff;
+        @include roboto(bold);
+      }
+    }
+  }
+}
+
 .blog-nav__link {
   padding: 14px 18px;
   display: block;
@@ -33,16 +105,17 @@
   &:hover {
     color: $lgreen;
   }
-  &--active {
-    border-right: 3px solid $lgreen;
-    color: $lgreen;
-    @include roboto(bold);
 
+  @include laptop {
+    color: rgba(#fff,.7);
+    &:hover {
+      color: rgba(#fff,1);
+    }
   }
 }
 .articles {
   width: 50%;
-  float: left;
+  margin-left: 28.3%;
   @include desktop {
     width: 60%;
   }

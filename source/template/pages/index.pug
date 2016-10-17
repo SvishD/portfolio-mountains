@@ -22,35 +22,60 @@ html
 		<![endif]-->
 
 	body
+		include ../common/preloader
 		.wrapper-index
+			.parallax
+				.parallax__layer
+					img(src="/assets/img/parallax/layer_009.jpg", alt="" class="parallax__layer-img")
+				.parallax__layer
+					img(src="/assets/img/parallax/layer_008.png", alt="" class="parallax__layer-img")
+				.parallax__layer
+					img(src="/assets/img/parallax/layer_007.png", alt="" class="parallax__layer-img")
+				.parallax__layer
+					img(src="/assets/img/parallax/layer_006.png", alt="" class="parallax__layer-img")
+				.parallax__layer
+					img(src="/assets/img/parallax/layer_005.png", alt="" class="parallax__layer-img")
+				.parallax__layer
+					img(src="/assets/img/parallax/layer_004.png", alt="" class="parallax__layer-img")
+				.parallax__layer
+					img(src="/assets/img/parallax/layer_003.png", alt="" class="parallax__layer-img")
+				.parallax__layer
+					img(src="/assets/img/parallax/layer_002.png", alt="" class="parallax__layer-img")
+				.parallax__layer
+					img(src="/assets/img/parallax/layer_001.png", alt="" class="parallax__layer-img")
+				.parallax__layer.parallax__layer__009
+					img(src="/assets/img/parallax/layer_000.png", alt="" class="parallax__layer-img")
 			header.welcome-header
 				a.auth-btn(href="/auth.html") Авторизоваться
-			.card
-				.card__content
-					.info
-						include ../common/_user--welcome
-					.card__buttons
-						a(href="/works.html").card__button Мои работы
-						a(href="/about.html").card__button Обо мне
-						a(href="/blog.html").card__button Блог
-				form.auth-form
-					.auth-form__content
-						h3.subtitle.subtitle--auth
-							.subtitle__text Авторизуйтесь
-						.auth-form__login-wrapper
-							input(type="text" placeholder="Логин").auth-form__login
-						.auth-form__pass-wrapper
-							input(type="password" placeholder="Пароль").auth-form__pass
-						input(type="checkbox" id="captcha").captcha__check
-						label(for="captcha").captcha__check-label Я человек
-						.captcha__question Вы точно не робот?
-						input(type="radio" name="captcha-radio" id="captcha-yes").captcha__radio
-						label(for="captcha-yes").captcha__radio-label Да
-						input(type="radio" name="captcha-radio" id="captcha-no").captcha__radio
-						label(for="captcha-no").captcha__radio-label Не уверен
-					.card__buttons.card__buttons--auth
-						a(href="/index.html").card__button.index-btn На главную
-						a(href="#").card__button Войти
+			.flip-container
+				.flipper
+					.card
+						.face.front
+							.info
+								include ../common/_user--welcome
+							.card__buttons
+								a(href="/works.html").card__button Мои работы
+								a(href="/about.html").card__button Обо мне
+								a(href="/blog.html").card__button Блог
+						.face.back
+							form.auth-form
+								.auth-form__content
+									h3.subtitle.subtitle--auth
+										.subtitle__text Авторизуйтесь
+									.auth-form__login-wrapper
+										input(type="text" placeholder="Логин").auth-form__login
+									.auth-form__pass-wrapper
+										input(type="password" placeholder="Пароль").auth-form__pass
+									input(type="checkbox" id="captcha").captcha__check
+									label(for="captcha").captcha__check-label Я человек
+									.captcha__question Вы точно не робот?
+									input(type="radio" name="captcha-radio" id="captcha-yes").captcha__radio
+									label(for="captcha-yes").captcha__radio-label Да
+									input(type="radio" name="captcha-radio" id="captcha-no").captcha__radio
+									label(for="captcha-no").captcha__radio-label Не уверен
+								.card__buttons.card__buttons--auth
+									a(href="/index.html").card__button.index-btn На главную
+									a(href="#").card__button Войти
 			footer.welcome-footer
 				.welcome-footer__wrapper
 					span.welcome-footer__copy © Свищук Дмитрий 

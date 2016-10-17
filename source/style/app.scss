@@ -18,6 +18,8 @@ $lgreen: #00bfa5;
 
 // sections
 @import "includes/sections/_titles";
+@import "includes/sections/overlay-menu";
+@import "includes/sections/preloader";
 @import "includes/sections/welcome";
 @import "includes/sections/header";
 @import "includes/sections/about";
