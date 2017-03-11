@@ -1,3 +1,4 @@
+//map
 var map = (function () {
 
 function init() {
